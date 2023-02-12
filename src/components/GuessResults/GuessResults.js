@@ -6,7 +6,7 @@ import Guess from "../Guess";
 
 function GuessResults({ results }) {
   return range(0, NUM_OF_GUESSES_ALLOWED).map((guess) => (
-    <Guess guess={results[guess]} />
+    <Guess guess={results[guess] || []} key={guess} />
   ));
 }
 
