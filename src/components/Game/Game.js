@@ -1,6 +1,6 @@
 import React from "react";
 
-import Guess from "../Guess";
+import GuessInput from "../GuessInput";
 
 import { sample } from "../../utils";
 import { WORDS } from "../../data";
@@ -20,10 +20,10 @@ function Game() {
   }
 
   return (
-    <div className="game-wrapper">
+    <>
       <GuessResults results={results} />
-      <Guess handleAddGuess={handleAddGuess} />
-    </div>
+      <GuessInput handleAddGuess={handleAddGuess} />
+    </>
   );
 }
 
